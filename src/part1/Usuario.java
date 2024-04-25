@@ -1,4 +1,4 @@
-package classes;
+package part1;
 
 public class Usuario  {
 
@@ -53,7 +53,7 @@ public class Usuario  {
 
     @Override
     public String toString() {
-        return "classes.Usuario{" +
+        return "part1.Usuario{" +
                 "nome='" + nome + '\'' +
                 ", sexo='" + sexo + '\'' +
                 ", telefone='" + telefone + '\'' +

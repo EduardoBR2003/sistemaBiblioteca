@@ -1,4 +1,4 @@
-package classes;
+package part1;
 
 public class Livro extends Obra {
     private String area;
@@ -16,10 +16,10 @@ public class Livro extends Obra {
     }
 
     public String abrirLivro(){
-        return "classes.Livro Aberto";
+        return "part1.Livro Aberto";
     }
     public String fecharLivro(){
-        return "classes.Livro fechado";
+        return "part1.Livro fechado";
     }
 
     public Livro(){
@@ -68,7 +68,7 @@ public class Livro extends Obra {
 
     @Override
     public String toString() {
-        return "classes.Livro{" +
+        return "part1.Livro{" +
                 " area='" + area + '\'' +
                 ", editora='" + editora + '\'' +
                 ", edicao=" + edicao +

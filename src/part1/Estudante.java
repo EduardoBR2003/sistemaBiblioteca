@@ -1,4 +1,4 @@
-package classes;
+package part1;
 
 public class Estudante extends Usuario{
     private String materia;

@@ -1,4 +1,4 @@
-package classes;
+package part1;
 
 public class Obra {
     private String titulo;
@@ -50,7 +50,7 @@ public class Obra {
 
     @Override
     public String toString() {
-        return "classes.Obra{" +
+        return "part1.Obra{" +
                 "titulo='" + titulo + '\'' +
                 ", genero='" + genero + '\'' +
                 ", autor='" + autor + '\'' +

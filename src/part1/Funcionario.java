@@ -1,4 +1,4 @@
-package classes;
+package part1;
 
 public class Funcionario extends Usuario{
     private int id;

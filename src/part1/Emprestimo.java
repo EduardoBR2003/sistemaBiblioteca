@@ -1,4 +1,4 @@
-package classes;
+package part1;
 
 public class Emprestimo {
     private String data_Emprestimo;
@@ -24,7 +24,7 @@ public class Emprestimo {
 
     public void devolverLivro(){
         livro.setEmprestimo(true);
-        System.out.println("classes.Livro DEVOLVIDO!!!");
+        System.out.println("part1.Livro DEVOLVIDO!!!");
     }
 
     public String getData_Emprestimo() {
@@ -45,7 +45,7 @@ public class Emprestimo {
 
     @Override
     public String toString() {
-        return "classes.Emprestimo{" +
+        return "part1.Emprestimo{" +
                 "data_Emprestimo=" + data_Emprestimo +
                 ", horas=" + horas +
                 ", livro=" + livro +
