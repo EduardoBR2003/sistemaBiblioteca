@@ -136,5 +136,10 @@ public class Test {
                 \n0 - SAIR  
                 """;
     }
+
+    //Alterado
+    public static void testandoCommit(){
+        System.out.println("LINHA ALTERADA");
+    }
 }
 
