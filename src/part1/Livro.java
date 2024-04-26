@@ -1,37 +1,48 @@
 package part1;
 
+/*Atributos: Título, Autores, Área, Editora, Ano, Edição, Número de Folhas
+
+Métodos: get’s e set’s*/
 public class Livro extends Obra {
     private String area;
     private String editora;
-    private int edicao, num_Folhas;
+    private int edicao;
+    private int numFolhas;
     private Boolean emprestimo;
 
-    public Livro(String genero, String autor, String titulo, String area, String editora, int edicao, int num_Folhas, String ano) {
-        super(genero, autor,titulo, ano);
+    //Construtor
+    public Livro(String titulo, String autor, String area, String editora, String genero, int ano, int edicao, int numFolhas) {
+        super(genero, autor, titulo, ano);
         this.area = area;
         this.editora = editora;
         this.edicao = edicao;
-        this.num_Folhas = num_Folhas;
-        setEmprestimo(false);
-    }
-
-    public String abrirLivro(){
-        return "part1.Livro Aberto";
-    }
-    public String fecharLivro(){
-        return "part1.Livro fechado";
+        this.numFolhas = numFolhas;
+        this.emprestimo = false;
     }
 
     public Livro(){
-        setEmprestimo(false);
+        this.emprestimo = false;
     }
 
+    //Método de comportamento, utilizando polimorfismo
+    @Override
+    public void consumirObra() {
+        System.out.println("Ler livro.");
+    }
+
+    //Métodos gets e sets
     public Boolean isEmprestimo() {
         return emprestimo;
     }
-
-    public void setEmprestimo(Boolean emprestimo) {
+    public void setEmprestimo(Boolean emprestimo){
         this.emprestimo = emprestimo;
+    }
+
+    public void abrirLivro(){
+        System.out.println("Livro aberto para leitura.");
+    }
+    public void fecharLivro(){
+        System.out.println("Livro fechado para leitura.");
     }
 
     public String getArea() {
@@ -58,22 +69,21 @@ public class Livro extends Obra {
         this.edicao = edicao;
     }
 
-    public int getNum_Folhas() {
-        return num_Folhas;
+    public int getNumFolhas() {
+        return numFolhas;
     }
 
-    public void setNum_Folhas(int num_Folhas) {
-        this.num_Folhas = num_Folhas;
+    public void setNumFolhas(int numFolhas) {
+        this.numFolhas = numFolhas;
     }
 
     @Override
     public String toString() {
-        return "part1.Livro{" +
-                " area='" + area + '\'' +
+        return "Livro{" +
+                "area='" + area + '\'' +
                 ", editora='" + editora + '\'' +
                 ", edicao=" + edicao +
-                ", num_Folhas=" + num_Folhas +
-                ", ano='" + getAno() + '\'' +
+                ", numFolhas=" + numFolhas +
                 ", emprestimo=" + emprestimo +
                 "} " + super.toString();
     }

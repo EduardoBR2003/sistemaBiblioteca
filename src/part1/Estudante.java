@@ -1,25 +1,27 @@
 package part1;
 
 public class Estudante extends Usuario{
-    private String materia;
+    private String turma;
     private int matricula;
+
+    //Construtores
+    public Estudante(String nome, int idade, String sexo, String telefone, int id, String turma, int matricula) {
+        super(nome, idade, sexo, telefone, id);
+        this.turma = turma;
+        this.matricula = matricula;
+    }
 
     public Estudante() {
 
     }
 
-    public Estudante(String nome, String sexo, String telefone, int idade, String materia, int matricula) {
-        super(nome, sexo, telefone, idade);
-        setMateria(materia);
-        setMatricula(matricula);
+    //Métodos gets e sets
+    public String getTurma() {
+        return turma;
     }
 
-    public String getMateria() {
-        return materia;
-    }
-
-    public void setMateria(String materia) {
-        this.materia = materia;
+    public void setTurma(String turma) {
+        this.turma = turma;
     }
 
     public int getMatricula() {

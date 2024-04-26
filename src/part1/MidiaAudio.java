@@ -1,37 +1,45 @@
 package part1;
 
-public class MidiaAudio extends Obra {
-    private String tipoLinguagem;
-    private int duracao;
+public class MidiaAudio extends Obra{
+    private String idioma;
+    private String duracao;
 
-    public MidiaAudio(){
-
-    }
-
-    public MidiaAudio(String genero, String autor, String titulo, String tipoLinguagem, int duracao,String ano) {
+    //Construtor
+    public MidiaAudio(String genero, String autor, String titulo, int ano, String idioma, String duracao) {
         super(genero, autor, titulo, ano);
-        this.tipoLinguagem = tipoLinguagem;
+        this.idioma = idioma;
         this.duracao = duracao;
     }
 
-    public MidiaAudio(String tipoLinguagem, int duracao) {
-        this.tipoLinguagem = tipoLinguagem;
+    public MidiaAudio(String idioma, String duracao) {
+        this.idioma = idioma;
         this.duracao = duracao;
     }
 
-    public int getDuracao() {
+    public MidiaAudio() {
+
+    }
+
+    //Método de comportamento, utilizando polimorfismo
+    @Override
+    public void consumirObra() {
+        System.out.println("Ouvir AUDIO.");
+    }
+
+    public String getIdioma() {
+        return idioma;
+    }
+
+    //Métodos gets e sets
+    public void setIdioma(String idioma) {
+        this.idioma = idioma;
+    }
+
+    public String getDuracao() {
         return duracao;
     }
 
-    public void setDuracao(int duracao) {
+    public void setDuracao(String duracao) {
         this.duracao = duracao;
-    }
-
-    public String getTipoLinguagem() {
-        return tipoLinguagem;
-    }
-
-    public void setTipoLinguagem(String tipoLinguagem) {
-        this.tipoLinguagem = tipoLinguagem;
     }
 }

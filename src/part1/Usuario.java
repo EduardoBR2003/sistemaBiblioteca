@@ -1,30 +1,52 @@
 package part1;
+/*Atributos: Nome, Idade, Sexo, Telefone
 
-public class Usuario  {
+Métodos: get’s e set’s*/
+public class Usuario {
+    private int id;
+    private String nome;
+    private int idade;
+    private String sexo;
+    private String telefone;
 
-    protected String nome, sexo, telefone;
-    protected int idade;
-
+    //Construtores
+    public Usuario(String nome, int idade, String sexo, String telefone, int id) {
+        this.nome = nome;
+        this.idade = idade;
+        this.sexo = sexo;
+        this.telefone = telefone;
+        this.id = id;
+    }
     public Usuario(){
 
     }
-    public Usuario(String nome, String sexo, String telefone, int idade) {
-        setNome(nome);
-        setSexo(sexo);
-        setTelefone(telefone);
-        setIdade(idade);
+
+    //Métodos gets e sets
+    public int getId() {
+        return id;
     }
 
-    public String lerLivro(){
-        return "Lendo livro";
+    public void setId(int id) {
+        this.id = id;
     }
 
+    public void lerLivro(){
+        System.out.println("O usuário está lendo o livro.");
+    }
     public String getNome() {
         return nome;
     }
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
     }
 
     public String getSexo() {
@@ -43,21 +65,14 @@ public class Usuario  {
         this.telefone = telefone;
     }
 
-    public int getIdade() {
-        return idade;
-    }
-
-    public void setIdade(int idade) {
-        this.idade = idade;
-    }
-
     @Override
     public String toString() {
-        return "part1.Usuario{" +
-                "nome='" + nome + '\'' +
+        return "Usuario{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", idade=" + idade +
                 ", sexo='" + sexo + '\'' +
                 ", telefone='" + telefone + '\'' +
-                ", idade=" + idade +
                 '}';
     }
 }

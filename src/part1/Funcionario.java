@@ -1,27 +1,19 @@
 package part1;
 
-public class Funcionario extends Usuario{
-    private int id;
+public class Funcionario extends Usuario {
     private String funcao;
 
-    public Funcionario() {
+    //Construtores
+    public Funcionario(String nome, int idade, String sexo, String telefone, int id, String funcao) {
+        super(nome, idade, sexo, telefone, id);
+        this.funcao = funcao;
+    }
+
+    public Funcionario(){
 
     }
 
-    public Funcionario(String nome, String sexo, String telefone, int idade, int id, String funcao) {
-        super(nome, sexo, telefone, idade);
-        setId(id);
-        setFuncao(funcao);
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
+    //Métodos gets e sets
     public String getFuncao() {
         return funcao;
     }

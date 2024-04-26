@@ -1,13 +1,12 @@
-package part1;
+package CodigoAuxiliar;
 
 public class Obra {
     private String titulo;
     private String genero;
     private String autor;
-    private int ano;
+    private String ano;
 
-    //Construtor
-    public Obra(String genero, String autor, String titulo, int ano) {
+    public Obra(String genero, String autor, String titulo, String ano) {
         setGenero(genero);
         setAutor(autor);
         setTitulo(titulo);
@@ -17,17 +16,11 @@ public class Obra {
     public Obra() {
     }
 
-    //Métodos de comportamento
-    public void consumirObra(){
-
-    }
-
-    //Métodos gets e sets
-    public int getAno() {
+    public String getAno() {
         return ano;
     }
 
-    public void setAno(int ano) {
+    public void setAno(String ano) {
         this.ano = ano;
     }
 
@@ -57,11 +50,11 @@ public class Obra {
 
     @Override
     public String toString() {
-        return "Obra{" +
+        return "CodigoAuxiliar.Obra{" +
                 "titulo='" + titulo + '\'' +
                 ", genero='" + genero + '\'' +
                 ", autor='" + autor + '\'' +
-                ", ano=" + ano +
+                ", ano='" + ano + '\'' +
                 '}';
     }
 }

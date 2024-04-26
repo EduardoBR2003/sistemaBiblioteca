@@ -1,4 +1,4 @@
-package part1;
+package CodigoAuxiliar;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -36,7 +36,7 @@ public class Test {
 //                    System.out.println("Insira o númeor de folhas: ");
 //                    novoLivro.setNum_Folhas(sc.nextInt());
                     livros.add(novoLivro);
-                    System.out.println("part1.Livro cadastrado com sucesso!!!");
+                    System.out.println("Livro cadastrado com sucesso!!!");
                     break;
                 case 2://Cadastrar User
                     Usuario novoUser = new Usuario("Eduardo","masculino","38999343462",20);
@@ -52,7 +52,7 @@ public class Test {
                     System.out.println("Usuário cadastrado com sucesso: ");
                     sc = new Scanner(System.in);
                     break;
-                case 3://part1.Emprestimo
+                case 3://CodigoAuxiliar.Emprestimo
                     Emprestimo emp = new Emprestimo();
                     System.out.println("Realizando empréstimo:");
 
@@ -124,7 +124,7 @@ public class Test {
     public static String menu(){
         return """
                 \nSelecione a opção que queira executar\n
-                \n1 - Cadastrar part1.Livro:    
+                \n1 - Cadastrar CodigoAuxiliar.Livro:    
                 \n2 - Cadastrar Usuário:  
                 \n3 - Realizar empréstimo:
                 \n4 - Realizar devolução:
