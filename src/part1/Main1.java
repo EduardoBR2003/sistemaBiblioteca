@@ -2,7 +2,21 @@ package part1;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+/*Acontece os seguintes polimorfismos:
 
+- Sobrecarga (Overloading)
+- Sobrescrita (Overriding)
+
+Para implementa as seguintes regras:
+    Empréstimos para estudantes: até 3 livros, por até 7 dias
+    Empréstimos para funcionários: até 6 livros, por até 15 dias
+    Empréstimos para professores: até 9 livros, por até 30 dias.
+
+    Seria necessario criar um método na classe 'Empréstimo' para
+    verificar qual de qual tipo de classe o objeto usuario foi instanciado,
+    com isso aplicando as regras dentro método, e retornando um valor
+    Booleano, com a determina regra.
+*/
 public class Main1 {
     public static void main(String[] args) {
         Menu menu = new Menu();
@@ -16,7 +30,6 @@ public class Main1 {
 //        menu.mostrarEmprestimos();
 //        menu.realizarDevolucao();
 //        menu.mostrarEmprestimos();
-
     }
 
     public static class Menu{
@@ -51,6 +64,65 @@ public class Main1 {
 
             livros.add(livro);
             System.out.println("Cadastro do livro '"+ livro.getTitulo() +"' realizado com sucesso.");
+        }
+
+        public void cadastrarProfessor(){
+            Professor professor = new Professor();
+            System.out.println("Insira o nome do Professor: ");
+            professor.setNome(reader().next());
+            System.out.println("Insira a idade:");
+            professor.setIdade(reader().nextInt());
+            System.out.println("Insira o sexo: ");
+            professor.setSexo(reader().next());
+            System.out.println("Insira o telefone: ");
+            professor.setTelefone(reader().next());
+            System.out.println("Insira o id: ");
+            professor.setId(reader().nextInt());
+            System.out.println("Insira a disciplina: ");
+            professor.setDisciplina(reader().next());
+            System.out.println("Insira a matéria: ");
+            professor.setMateria(reader().next());
+
+            usuarios.add(professor);
+            System.out.println("O professor '"+professor .getNome()+"' cadastrado com sucesso.");
+        }
+
+        public void cadastrarEstudante(){
+            Estudante estudante = new Estudante();
+            System.out.println("Insira o nome do estudante: ");
+            estudante.setNome(reader().next());
+            System.out.println("Insira a idade:");
+            estudante.setIdade(reader().nextInt());
+            System.out.println("Insira o sexo: ");
+            estudante.setSexo(reader().next());
+            System.out.println("Insira o telefone: ");
+            estudante.setTelefone(reader().next());
+            System.out.println("Insira a matricula: ");
+            estudante.setMatricula(reader().next());
+            System.out.println("Insira a turma: ");
+            estudante.setTurma(reader().next());
+
+            usuarios.add(estudante);
+            System.out.println("O estudante '"+estudante.getNome()+"' cadastrado com sucesso.");
+        }
+
+        public void cadastrarFuncionario(){
+            Funcionario funcionario = new Funcionario();
+            System.out.println("Insira o nome do Funcionário: ");
+            funcionario.setNome(reader().next());
+            System.out.println("Insira a idade:");
+            funcionario.setIdade(reader().nextInt());
+            System.out.println("Insira o sexo: ");
+            funcionario.setSexo(reader().next());
+            System.out.println("Insira o telefone: ");
+            funcionario.setTelefone(reader().next());
+            System.out.println("Insira o id: ");
+            funcionario.setId(reader().nextInt());
+            System.out.println("Insira a função: ");
+            funcionario.setFuncao(reader().next());
+
+            usuarios.add(funcionario);
+            System.out.println("O funcionário '"+funcionario.getNome()+"' cadastrado com sucesso.");
         }
 
         public void cadastraUsuario(){ //Cadastrando usuário
@@ -97,7 +169,6 @@ public class Main1 {
 
             System.out.println("Empréstimo realizado com sucesso.");
         }
-
 
         public void realizarDevolucao(){
             listarEmpres(emprestimos);
@@ -152,7 +223,18 @@ public class Main1 {
                         cadastraLivro();
                         break;
                     case 2:
-                        cadastraUsuario();
+                        System.out.println("Informe qual tipo de usuário deseja cadastrar: ");
+                        System.out.println("1 - Professor \n 2 - Estudante \n 3 - Funcionário");
+                        int i = reader().nextInt();
+                        if(i==1){
+                            cadastrarProfessor();
+                        } else if (i==2) {
+                            cadastrarEstudante();
+                        } else if (i==3) {
+                            cadastrarFuncionario();
+                        }else {
+                            System.out.println("Nenhuma opção selecionada.");
+                        }
                         break;
                     case 3:
                         cadastraEmprestimo();

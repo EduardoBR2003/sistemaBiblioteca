@@ -17,6 +17,12 @@ public class Usuario {
         this.telefone = telefone;
         this.id = id;
     }
+    public Usuario(String nome, int idade, String sexo, String telefone) {
+        this.nome = nome;
+        this.idade = idade;
+        this.sexo = sexo;
+        this.telefone = telefone;
+    }
     public Usuario(){
 
     }

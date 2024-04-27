@@ -2,11 +2,11 @@ package part1;
 
 public class Estudante extends Usuario{
     private String turma;
-    private int matricula;
+    private String matricula;
 
     //Construtores
-    public Estudante(String nome, int idade, String sexo, String telefone, int id, String turma, int matricula) {
-        super(nome, idade, sexo, telefone, id);
+    public Estudante(String nome, int idade, String sexo, String telefone, String turma, String matricula) {
+        super(nome, idade, sexo, telefone);
         this.turma = turma;
         this.matricula = matricula;
     }
@@ -24,11 +24,11 @@ public class Estudante extends Usuario{
         this.turma = turma;
     }
 
-    public int getMatricula() {
+    public String getMatricula() {
         return matricula;
     }
 
-    public void setMatricula(int matricula) {
+    public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
 }
